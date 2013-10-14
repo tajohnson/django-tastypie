@@ -1872,7 +1872,7 @@ class ModelResource(Resource):
 
         # Update with the provided kwargs.
         filters.update(kwargs)
-        applicable_filters = self.build_filters(filters=filters, request=None)
+        applicable_filters = self.build_filters(filters=filters, request=request)
 
         try:
             base_object_list = self.apply_filters(request, applicable_filters)
